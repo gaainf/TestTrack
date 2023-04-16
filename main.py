@@ -6,7 +6,7 @@ from app import app
 from db import db
 
 
-@app.post("/user/")
+@app.post("/user")
 async def create_user(user: SchemaUser):
     user_id = await ModelUser.create(**user.dict())
     return {"user_id": user_id}
@@ -17,7 +17,7 @@ async def get_user(id: int):
     user = await ModelUser.get(id)
     return SchemaUser(**user).dict()
 
-@app.get("/users/", response_model=List[SchemaUser])
+@app.get("/users", response_model=List[SchemaUser])
 async def get_users():
     users = await ModelUser.get_all()
     return users

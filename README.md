@@ -11,7 +11,7 @@ docker-compose up -d
 # PgAdmin
 - Open http://localhost:5050/
 - Use credentials `pgadmin4@pgadmin.org:admin`
-- Create new server connection to postgresql://postgres:postgres@db:5432/test_db
+- Create new server connection to `postgresql://postgres:postgres@db:5432/test_db`
 
 ## Stop cluster
 ```bash

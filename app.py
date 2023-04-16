@@ -2,7 +2,7 @@ from db import db
 from fastapi import FastAPI
 
 
-app = FastAPI(title="TestTrack API")
+app = FastAPI(title="TestTrack API", description="TestTrack Open API")
 
 
 @app.on_event("startup")
